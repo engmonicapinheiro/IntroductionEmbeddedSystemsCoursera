@@ -27,7 +27,8 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
+void main() 
+{
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
@@ -36,8 +37,54 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+  unsigned char minimumValue;
   /* Statistics and Printing Functions Go Here */
+  
+  minimumValue = find_minimum(test, SIZE);
+  
+  printf("\nThe minimum value in test is %d\n", minimumValue);
+
+	
+
 
 }
 
 /* Add other Implementation File Code Here */
+
+void print_array(unsigned char* array, unsigned int length)
+{    
+	for(unsigned int i = 0; i < length; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	
+}
+
+unsigned char find_minimum(unsigned char *ptr, int numElements)
+{
+	unsigned char minimum = ptr[0];
+	
+	for(unsigned int i = 0; i < numElements; i++)
+	{
+	   if (ptr[i] < minimum)
+	   {
+	     minimum = ptr[i];     
+	   }
+	}
+	
+	return minimum;
+}
+
+
+
+#if 0
+unsigned char find_maximum(unsigned char* array, unsigned int length)
+{
+	unsigned char maximum = 
+	for(unsigned int i = 0; i < length; i++)
+	{
+	
+	}
+}
+#endif
+

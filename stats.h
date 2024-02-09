@@ -21,9 +21,6 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
-
-
 /**
  * @brief calculates the minimum element from a dataset (the given array)
  *
@@ -35,6 +32,96 @@
  * @return an unsigned char that is the minimum value of the given array
  */
 unsigned char find_minimum(unsigned char *ptr, int numElements);
+
+
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * Prints the statistical parameters from the dataset
+ * prints the minimum, the maximum, the mean and the median.
+ *
+ * @return void
+ */
+void print_statistics(void);
+
+
+/**
+ * @brief Prints the array
+ *
+ * <Add Extended Description Here>
+ *
+ * @param array   the array to be printed
+ * @param length  the length of the array
+ *
+ * @return void
+ */
+void print_array(unsigned char* array, unsigned int length);
+
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param array  the dataset
+ * @param length the size of the array
+ *
+ * @return the median of the elements of the array
+ */
+unsigned char find_median(unsigned char* array, unsigned int length);
+
+
+/**
+ * @brief Calculates the mean from the array
+ *
+ * <Add Extended Description Here>
+ *
+ * @param array  the dataset
+ * @param length the size of the array
+ *
+ * @return the median of the elements of the array
+ */
+unsigned char find_mean(unsigned char* array, unsigned int length);
+
+/**
+ * @brief Calculates the maximum from the array
+ *
+ * <Add Extended Description Here>
+ *
+ * @param array  the dataset
+ * @param length the size of the array
+ *
+ * @return the median of the elements of the array
+ */
+unsigned char find_maximum(unsigned char* array, unsigned int length);
+
+/**
+ * @brief Calculates the minimum from the array
+ *
+ * <Add Extended Description Here>
+ *
+ * @param array  the dataset
+ * @param length the size of the array
+ *
+ * @return the median of the elements of the array
+ */
+//unsigned char find_minimum(unsigned char* array, unsigned int length);
+
+/**
+ * @brief Calculates the minimum from the array
+ *
+ * Given an array of data and a length, sorts the array from largest to smallest
+ * the zeroth element should be the largest value, and the last element (n-1) should
+ * be the smallest value
+ *
+ * @param array  the dataset
+ * @param length the size of the array
+ *
+ * @return the median of the elements of the array
+ */
+unsigned char* sort_array(unsigned char* array, unsigned int length);
+
 
 
 
