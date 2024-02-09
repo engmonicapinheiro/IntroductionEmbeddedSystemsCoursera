@@ -87,7 +87,7 @@ unsigned char find_mean(unsigned char* array, unsigned int length);
 /**
  * @brief Calculates the maximum from the array
  *
- * <Add Extended Description Here>
+ * <Given an array of data and a length, returns the maximum>
  *
  * @param array  the dataset
  * @param length the size of the array

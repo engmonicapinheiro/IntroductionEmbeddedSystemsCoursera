@@ -39,6 +39,7 @@ void main()
 
   /* Other Variable Declarations Go Here */
   unsigned char minimumValue;
+  unsigned char maximumValue;
   unsigned char mean;
   /* Statistics and Printing Functions Go Here */
   
@@ -47,9 +48,12 @@ void main()
   minimumValue = find_minimum(test, SIZE);
   printf("\nThe minimum value in test is %d\n", minimumValue);
   
+  maximumValue = find_maximum(test, SIZE);
+  printf("The maximum value in test is %d\n", maximumValue);
+  
   mean = find_mean(test, SIZE);
   
-  printf("\nThe mean in test is %d\n", mean);
+  printf("The mean in test is %d\n", mean);
 
 	
 
@@ -81,6 +85,25 @@ unsigned char find_minimum(unsigned char *ptr, int numElements)
 	
 	return minimum;
 }
+
+unsigned char find_maximum(unsigned char* array, unsigned int length)
+{
+   unsigned char maximum = array[0];
+
+   for(unsigned int i = 0; i < length; i++)
+   {
+     if (array[i] > maximum)
+     {
+       maximum = array[i];     
+     }
+   }
+
+return maximum;
+
+
+}
+
+
 
 unsigned char find_mean(unsigned char* array, unsigned int length)
 {
