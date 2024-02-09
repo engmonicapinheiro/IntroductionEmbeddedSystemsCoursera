@@ -35,14 +35,21 @@ void main()
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+                                
 
   /* Other Variable Declarations Go Here */
   unsigned char minimumValue;
+  unsigned char mean;
   /* Statistics and Printing Functions Go Here */
   
-  minimumValue = find_minimum(test, SIZE);
+  print_array(test, SIZE);
   
+  minimumValue = find_minimum(test, SIZE);
   printf("\nThe minimum value in test is %d\n", minimumValue);
+  
+  mean = find_mean(test, SIZE);
+  
+  printf("\nThe mean in test is %d\n", mean);
 
 	
 
@@ -75,16 +82,18 @@ unsigned char find_minimum(unsigned char *ptr, int numElements)
 	return minimum;
 }
 
-
-
-#if 0
-unsigned char find_maximum(unsigned char* array, unsigned int length)
+unsigned char find_mean(unsigned char* array, unsigned int length)
 {
-	unsigned char maximum = 
+	unsigned int sum = 0;
+	unsigned char result = 0;
+	
 	for(unsigned int i = 0; i < length; i++)
 	{
-	
+		sum += array[i];
 	}
+	
+	result = sum / length;
+	
+	return result;
 }
-#endif
 

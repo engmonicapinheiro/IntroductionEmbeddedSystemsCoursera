@@ -49,7 +49,7 @@ void print_statistics(void);
 /**
  * @brief Prints the array
  *
- * <Add Extended Description Here>
+ * <Given an array of data and a length, prints the array to the screen>
  *
  * @param array   the array to be printed
  * @param length  the length of the array
@@ -75,7 +75,7 @@ unsigned char find_median(unsigned char* array, unsigned int length);
 /**
  * @brief Calculates the mean from the array
  *
- * <Add Extended Description Here>
+ * <Given an array of data and a length, returns the mean>
  *
  * @param array  the dataset
  * @param length the size of the array
