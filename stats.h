@@ -14,24 +14,13 @@
  *
  * <Add Extended Description Here>
  *
- * @author Monic Pinheiro
+ * @author Monica Pinheiro
  * @date January 2024
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/**
- * @brief calculates the minimum element from a dataset (the given array)
- *
- * This function takes a given array and finds its minimum.
- *
- * @param ptr the first element of the array to be processed
- * @param numElements the total number of elements
- *
- * @return an unsigned char that is the minimum value of the given array
- */
-unsigned char find_minimum(unsigned char *ptr, int numElements);
 
 
 
@@ -71,7 +60,6 @@ void print_array(unsigned char* array, unsigned int length);
  */
 unsigned char find_median(unsigned char* array, unsigned int length);
 
-
 /**
  * @brief Calculates the mean from the array
  *
@@ -97,19 +85,20 @@ unsigned char find_mean(unsigned char* array, unsigned int length);
 unsigned char find_maximum(unsigned char* array, unsigned int length);
 
 /**
- * @brief Calculates the minimum from the array
+ * @brief calculates the minimum element from a dataset (the given array)y
  *
- * <Add Extended Description Here>
+ * <This function takes a given array and finds its minimum.>
  *
- * @param array  the dataset
- * @param length the size of the array
+ * @param <ptr> <the dataset>
+ * @param numElements the total number of elements
  *
- * @return the median of the elements of the array
+ * @return an unsigned char that is the minimum value of the given array
  */
-//unsigned char find_minimum(unsigned char* array, unsigned int length);
+unsigned char find_minimum(unsigned char *ptr, int numElements);
+
 
 /**
- * @brief Calculates the minimum from the array
+ * @brief sorts the array using the Bubblesort algorithm
  *
  * Given an array of data and a length, sorts the array from largest to smallest
  * the zeroth element should be the largest value, and the last element (n-1) should
@@ -118,27 +107,21 @@ unsigned char find_maximum(unsigned char* array, unsigned int length);
  * @param array  the dataset
  * @param length the size of the array
  *
- * @return the median of the elements of the array
+ * @return the sorted the array
  */
 unsigned char* sort_array(unsigned char* array, unsigned int length);
 
-
-
-
-//template for the functions
-
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief <swap two values>
  *
- * <Add Extended Description Here>
+ * <function to swap two values. To be used exclusively at the Bubblesort function.>
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <ptrx> <first value to be swapped>
+ * @param <ptry> <second value to be swapped>
  *
  * @return <Add Return Informaiton here>
  */
+void swap(unsigned char* ptrx, unsigned char* ptry);
 
 
 #endif /* __STATS_H__ */
