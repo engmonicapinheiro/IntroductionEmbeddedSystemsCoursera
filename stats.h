@@ -49,7 +49,7 @@ void print_array(unsigned char* array, unsigned int length);
 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief <Find the midpoint value of a dataset>
  *
  * <Add Extended Description Here>
  *

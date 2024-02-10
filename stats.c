@@ -20,6 +20,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "stats.h"
 
 /* Size of the Data Set */
@@ -38,6 +39,7 @@ void main()
   /* Other Variable Declarations Go Here */
   unsigned char minimumValue;
   unsigned char maximumValue;
+  unsigned char median;
   unsigned char* sortedArray;
   unsigned char mean;
   
@@ -68,6 +70,10 @@ void main()
   print_array(sortedArray, SIZE);
   
   printf("\n");
+  
+
+  median = find_median(sortedArray, SIZE);
+  printf("The median in test is %d\n", median);
   
 
 }
@@ -128,6 +134,21 @@ unsigned char find_mean(unsigned char* array, unsigned int length)
 	return result;
 }
 
+unsigned char find_median(unsigned char* array, unsigned int length)
+{
+	unsigned char result;
+	
+	if(length % 2 == 0)
+	{
+	  result = array[length/2] + array[length/2 + 1]/ 2;
+	}	
+	else
+	{
+	   result = array[length/2 + 1];
+	}
+		
+	return result;
+}
 
 void swap(unsigned char* ptrx, unsigned char* ptry)
 {
