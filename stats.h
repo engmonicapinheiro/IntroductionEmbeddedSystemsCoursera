@@ -25,8 +25,8 @@ struct statistics
 {
   unsigned char minimumValue;
   unsigned char maximumValue;
-  unsigned char median;
   unsigned char mean;
+  unsigned char median;
 };
 
 

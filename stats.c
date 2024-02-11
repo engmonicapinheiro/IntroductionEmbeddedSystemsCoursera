@@ -29,7 +29,6 @@
 
 void main() 
 {
-
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
@@ -81,6 +80,13 @@ void print_statistics(struct statistics testStatistics)
 
 void print_array(unsigned char* array, unsigned int length)
 {    
+	if(array == NULL)
+	{
+		printf("ERROR: The array is empty or has invalid length.");
+		return;
+	}
+
+
 	for(unsigned int i = 0; i < length; i++)
 	{
 		printf("%d ", array[i]);
@@ -90,6 +96,12 @@ void print_array(unsigned char* array, unsigned int length)
 
 unsigned char find_minimum(unsigned char *ptr, int numElements)
 {
+	if(ptr == NULL)
+	{
+		printf("ERROR: The array is empty or has invalid length.");
+		return -1;
+	}
+	
 	unsigned char minimum = ptr[0];
 	
 	for(unsigned int i = 0; i < numElements; i++)
@@ -105,6 +117,12 @@ unsigned char find_minimum(unsigned char *ptr, int numElements)
 
 unsigned char find_maximum(unsigned char* array, unsigned int length)
 {
+	if(array == NULL)
+	{
+		printf("ERROR: The array is empty or has invalid length.");
+		return -1;
+	}
+
    unsigned char maximum = array[0];
 
    for(unsigned int i = 0; i < length; i++)
@@ -120,6 +138,12 @@ unsigned char find_maximum(unsigned char* array, unsigned int length)
 
 unsigned char find_mean(unsigned char* array, unsigned int length)
 {
+	if(array == NULL)
+	{
+		printf("ERROR: The array is empty or has invalid length.");
+		return -1;
+	}
+	
 	unsigned int sum = 0;
 	unsigned char result = 0;
 	
@@ -135,11 +159,17 @@ unsigned char find_mean(unsigned char* array, unsigned int length)
 
 unsigned char find_median(unsigned char* array, unsigned int length)
 {
+	if(array == NULL)
+	{
+		printf("ERROR: The array is empty or has invalid length.");
+		return -1;
+	}
+	
 	unsigned char result;
 	
 	if(length % 2 == 0)
 	{
-	  result = array[length/2] + array[length/2 + 1]/ 2;
+	  result = (array[length/2 - 1] + array[length/2])/ 2.0;
 	}	
 	else
 	{
