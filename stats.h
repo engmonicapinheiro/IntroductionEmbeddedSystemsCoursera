@@ -21,18 +21,24 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-
+struct statistics
+{
+  unsigned char minimumValue;
+  unsigned char maximumValue;
+  unsigned char median;
+  unsigned char mean;
+};
 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief <prints the statistical calculations done in this project>
  *
  * Prints the statistical parameters from the dataset
  * prints the minimum, the maximum, the mean and the median.
  *
  * @return void
  */
-void print_statistics(void);
+void print_statistics(struct statistics testStatistics);
 
 
 /**

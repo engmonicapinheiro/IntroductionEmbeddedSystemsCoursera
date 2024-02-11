@@ -26,6 +26,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
+
 void main() 
 {
 
@@ -37,48 +38,46 @@ void main()
                                                                
 
   /* Other Variable Declarations Go Here */
-  unsigned char minimumValue;
-  unsigned char maximumValue;
-  unsigned char median;
+  struct statistics testStatistics;
   unsigned char* sortedArray;
-  unsigned char mean;
-  
-  
+ 
+
   /* Statistics and Printing Functions Go Here */
   
   printf("The raw unsorted array is: \n");
   print_array(test, SIZE);
   
-  
-  /* calculate and print the minimum value of the array */
-  minimumValue = find_minimum(test, SIZE);
-  printf("\nThe minimum value in test is %d\n", minimumValue);
-  
-  
-  /* calculate and print the maximum value of the array */
-  maximumValue = find_maximum(test, SIZE);
-  printf("The maximum value in test is %d\n", maximumValue);
-  
-  /* calculate and print the mean */
-  mean = find_mean(test, SIZE);
-  printf("The mean in test is %d\n", mean);
-  
-  printf("The sorted array is: \n");
-  
-  /* sorting and printing the array */
+  printf("\nThe sorted array is: \n");
   sortedArray = sort_array(test, SIZE);
   print_array(sortedArray, SIZE);
-  
   printf("\n");
+    
+  /* calculate the minimum value of the array */
+  testStatistics.minimumValue = find_minimum(test, SIZE);
   
-
-  median = find_median(sortedArray, SIZE);
-  printf("The median in test is %d\n", median);
+  /* calculate the maximum value of the array */
+  testStatistics.maximumValue = find_maximum(test, SIZE);
   
+ /* calculate the median value of the array */
+  testStatistics.median = find_median(sortedArray, SIZE);
 
+  /* calculate the mean */
+  testStatistics.mean = find_mean(test, SIZE);
+  
+  /* print the four statistical parameters of the dataset */
+  print_statistics(testStatistics);
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(struct statistics testStatistics)
+{
+  printf("\nThe minimum value in the array is %d\n", testStatistics.minimumValue);
+  printf("The maximum value in the array is %d\n", testStatistics.maximumValue);
+  printf("The mean in the array is %d\n", testStatistics.mean);
+  printf("The median in the array is %d\n", testStatistics.median);
+}
+
 
 void print_array(unsigned char* array, unsigned int length)
 {    
