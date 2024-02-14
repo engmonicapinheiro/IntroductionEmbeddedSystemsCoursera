@@ -99,7 +99,7 @@ unsigned char find_minimum(unsigned char *ptr, int numElements)
 	if(ptr == NULL)
 	{
 		printf("ERROR: The array is empty or has invalid length.");
-		return -1;
+		return 2;
 	}
 	
 	unsigned char minimum = ptr[0];
@@ -120,7 +120,7 @@ unsigned char find_maximum(unsigned char* array, unsigned int length)
 	if(array == NULL)
 	{
 		printf("ERROR: The array is empty or has invalid length.");
-		return -1;
+		return 3;
 	}
 
    unsigned char maximum = array[0];
@@ -141,7 +141,7 @@ unsigned char find_mean(unsigned char* array, unsigned int length)
 	if(array == NULL)
 	{
 		printf("ERROR: The array is empty or has invalid length.");
-		return -1;
+		return 4;
 	}
 	
 	unsigned int sum = 0;
@@ -162,7 +162,7 @@ unsigned char find_median(unsigned char* array, unsigned int length)
 	if(array == NULL)
 	{
 		printf("ERROR: The array is empty or has invalid length.");
-		return -1;
+		return 5;
 	}
 	
 	unsigned char result;
